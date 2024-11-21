@@ -1,0 +1,21 @@
+{
+    "name": "Juego de Palabras",
+    "short_name": "Juego",
+    "description": "Un juego en el que los jugadores deben adivinar palabras y encontrar al impostor",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f4f4f9",
+    "theme_color": "#333",
+    "icons": [
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
