@@ -12,15 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Iniciar juego
   document.getElementById('startGame').addEventListener('click', () => {
     const numPlayers = parseInt(document.getElementById('numPlayers').value, 10);
-    if (numPlayers < 1 || numPlayers > 10) {
+    const numImpostors = parseInt(document.getElementById('numImpostors').value, 10);
+
+    if (numPlayers < 2 || numPlayers > 10) {
       alert('Número de jugadores no válido.');
+      return;
+    }
+    if (numImpostors < 1 || numImpostors >= numPlayers) {
+      alert('El número de impostores debe ser mayor que 0 y menor que el número de jugadores.');
       return;
     }
 
     createGameBoard(numPlayers);
-    assignWords(numPlayers);
-    });
-  
+    assignWords(numPlayers, numImpostors);
+  });
+
   // Función para crear las casillas
   function createGameBoard(numPlayers) {
     const gameBoard = document.getElementById('gameBoard');
@@ -34,14 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
       gameBoard.appendChild(casilla);
     }
   }
-  
-  // Función para asignar palabras e impostor
-  function assignWords(numPlayers) {
+
+  // Función para asignar palabras e impostores
+  function assignWords(numPlayers, numImpostors) {
     assignedWords = [];
     const randomWord = wordList[Math.floor(Math.random() * wordList.length)];
-    const impostorIndex = Math.floor(Math.random() * numPlayers);
+    const impostorIndexes = [];
+
+    // Seleccionar índices de los impostores
+    while (impostorIndexes.length < numImpostors) {
+      const index = Math.floor(Math.random() * numPlayers);
+      if (!impostorIndexes.includes(index)) {
+        impostorIndexes.push(index);
+      }
+    }
+
+    console.log(`Impostores asignados en índices: ${impostorIndexes}`); // Para depurar
+
+    // Asignar palabras y marcar impostores
     for (let i = 0; i < numPlayers; i++) {
-      assignedWords.push(i === impostorIndex ? 'Impostor' : randomWord);
+      assignedWords.push(impostorIndexes.includes(i) ? 'Impostor' : randomWord);
     }
   }
 

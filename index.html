@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Juego de Palabras</h1>
-
+    <h1>Adivina el impostor</h1>
+    <p>Selecciona el número de jugadores para empezar a jugar. A continuación id pasando el dispositivo y que cada jugador abra su caja para ver si tiene la palabra común o es el impostor.</p>
     <div>
         <label for="numPlayers">Número de jugadores: </label>
         <input type="number" id="numPlayers" min="2" max="10" value="6">
-        <button id="startGame">Comenzar Juego</button>
     </div>
+    <div>
+        <label for="numImpostors">Número de impostores: </label>
+        <input type="number" id="numImpostors" min="1" max="9" value="1">
+    </div>
+    <button id="startGame">Comenzar Juego</button>
 
     <div id="gameBoard" class="game-board"></div>
 
