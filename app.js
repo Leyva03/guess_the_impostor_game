@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iniciar juego
     document.getElementById('startGame').addEventListener('click', () => {
       const numPlayers = parseInt(document.getElementById('numPlayers').value, 10);
-      if (numPlayers < 1 || numPlayers > 10) {
+      if (numPlayers < 2 || numPlayers > 10) {
         alert('Número de jugadores no válido.');
         return;
       }

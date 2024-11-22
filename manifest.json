@@ -1,7 +1,7 @@
 {
     "name": "Juego de Palabras",
     "short_name": "Juego",
-    "description": "Un juego en el que los jugadores deben adivinar palabras y encontrar al impostor",
+    "description": "Un juego en el que los jugadores deben encontrar al impostor que no conoce la palabra común",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#f4f4f9",
