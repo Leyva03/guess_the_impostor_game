@@ -1,6 +1,7 @@
 # Impostor Word Game
 
 A web-based game where players try to identify the impostor among them! The game selects a random word for most players, while one player gets "impostor." Players must take turns drawing or describing the word, trying to identify who doesn't know the word.
+Play now: https://leyva03.github.io/guess_the_impostor_game/
 
 ## Features
 - Customizable number of players.
