@@ -13,17 +13,19 @@ h1 {
 }
 
 p {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
   
 .game-board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);  /* Fijar 3 columnas */
   grid-gap: 10px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 600px;
+  margin: 20px auto;  /* Centrar el tablero */
+  width: 80%;  /* Ajustar el ancho a un 80% de la pantalla */
+  max-width: 600px;  /* Limitar el ancho máximo */
+  justify-items: center;  /* Centrar las casillas horizontalmente */
+  align-items: center;  /* Centrar las casillas verticalmente */
 }
   
 .casilla {
